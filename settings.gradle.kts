@@ -17,3 +17,4 @@ rootProject.name = "RickAndMorty"
 include(":app")
 include(":rickandmortyapimodule")
 include(":rickandmortydatabasemodule")
+include(":core-ui")
