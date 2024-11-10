@@ -15,8 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "RickAndMorty"
 include(":app")
-include(":core-ui")
-include(":rickandmortyapilib")
-include(":rickandmortydatabaselib")
-include(":lib")
-include(":rickandmortyrepositorylib")
+include(":rickandmortyapi")
+include(":rickandmortydatabase")
+include(":rickandmortyrepository")

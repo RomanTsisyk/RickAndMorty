@@ -1,6 +1,8 @@
 plugins {
     id("java-library")
     id("org.jetbrains.kotlin.jvm")
+    id("kotlin-kapt")
+
 }
 
 java {
@@ -9,7 +11,13 @@ java {
 }
 
 dependencies {
-    // Kotlin Standard Library
+
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+
+    implementation ("androidx.room:room-ktx:2.6.1")
+    testImplementation ("androidx.room:room-testing:2.6.1")
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation(project(":rickandmortydatabaselib"))
