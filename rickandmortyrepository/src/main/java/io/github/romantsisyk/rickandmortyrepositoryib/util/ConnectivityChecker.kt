@@ -1,4 +1,4 @@
-package io.github.romantsisyk.rickandmortyrepositoryib
+package io.github.romantsisyk.rickandmortyrepositoryib.util
 
 import android.content.Context
 import android.net.ConnectivityManager

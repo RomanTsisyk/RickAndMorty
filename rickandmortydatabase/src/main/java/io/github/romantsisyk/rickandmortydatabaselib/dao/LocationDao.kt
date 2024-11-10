@@ -20,4 +20,7 @@ interface LocationDao {
 
     @Query("DELETE FROM locations")
     suspend fun clearLocations()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveLocations(locations: List<LocationEntity>)
 }

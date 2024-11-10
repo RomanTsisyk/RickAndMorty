@@ -20,4 +20,7 @@ interface EpisodeDao {
 
     @Query("DELETE FROM episodes")
     suspend fun clearEpisodes()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveEpisodes(episodes: List<EpisodeEntity>)
 }
