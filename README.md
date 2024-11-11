@@ -1,6 +1,27 @@
-# RickAndMorty SDK Project
+# Multi-Module Project with Android and Kotlin Libraries
 
-This is a test project for learning and experimenting with creating Kotlin libraries, Android libraries, and a small SDK. The project follows **clean architecture principles** and is structured to demonstrate modular design, testing, and extensibility.
+This repository demonstrates a multi-module project setup for an Android application, designed to test concepts and best practices in modular architecture. It includes:
+
+- **Two Android libraries**: Separate modules for API and database functionality, structured to maintain a **clean architecture**.
+- **One Kotlin library**: A platform-agnostic module that can be used across Android and non-Android projects, following **Kotlin best practices**.
+
+### Project Purpose
+This project was created as part of my preparation for a Senior SDK Engineer role. It showcases the implementation of a single source of truth pattern, modularization, dependency injection, and clean architecture principles on a small scale, simulating SDK development practices in a realistic setup.
+
+### Modules Overview
+- **API Module**: Handles network interactions and communicates with external APIs, providing structured responses.
+- **Database Module**: Manages local data storage using Room, ensuring offline functionality and data persistence.
+- **Repository Module**: Implements the single source of truth pattern, coordinating between the API and database modules to deliver reliable data to the application layer.
+
+### Features
+- **Multi-Module Architecture**: Promotes separation of concerns, allowing each module to focus on specific tasks and making the codebase more maintainable and scalable.
+- **Single Source of Truth**: The repository module prioritizes cached data and only fetches from the network when necessary, caching results to maintain a resilient and efficient data flow.
+- **Dependency Injection**: Supports modular design, enabling seamless testing and reducing dependencies between modules.
+
+### Future Enhancements
+- **Add UI Module**: Integrate a small UI layer to demonstrate a complete application flow using the modular setup.
+- **Extend Repository Logic**: Add more caching strategies and further optimize the single source of truth pattern.
+
 
 ## Project Overview
 
