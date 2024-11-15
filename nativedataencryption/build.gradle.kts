@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.romantsisyk.rickandmortyrepositoryib"
+    namespace = "io.github.romantsisyk.nativedataencryption"
     compileSdk = 35
 
     defaultConfig {
@@ -12,6 +12,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        externalNativeBuild {
+            cmake {
+                cppFlags("")
+            }
+        }
     }
 
     buildTypes {
@@ -23,6 +28,12 @@ android {
             )
         }
     }
+    externalNativeBuild {
+        cmake {
+            path("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -30,15 +41,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        prefab = true
+    }
 }
 
 dependencies {
+    implementation("io.github.vvb2060.ndk:boringssl:20241024-lto-ndk27")
 
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation(project(":rickandmortydatabase"))
-    implementation(project(":rickandmortyapi"))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")

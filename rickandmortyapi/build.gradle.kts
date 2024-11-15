@@ -9,22 +9,22 @@ java {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
 
     // Ktor for networking
-    implementation("io.ktor:ktor-client-core:2.0.0")
-    implementation("io.ktor:ktor-client-cio:2.0.0")
-    implementation("io.ktor:ktor-client-serialization:2.0.0")
-    implementation("io.ktor:ktor-client-logging:2.0.0")
-    implementation("io.ktor:ktor-client-content-negotiation:2.0.0")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.0")
+    implementation("io.ktor:ktor-client-core:3.0.1")
+    implementation("io.ktor:ktor-client-cio:3.0.1")
+    implementation("io.ktor:ktor-client-serialization:3.0.1")
+    implementation("io.ktor:ktor-client-logging:3.0.1")
+    implementation("io.ktor:ktor-client-content-negotiation:3.0.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.1")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
 
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.6.0")
-    testImplementation("io.ktor:ktor-client-mock:2.0.0")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.0.21")
+    testImplementation("io.ktor:ktor-client-mock:3.0.1")
     testImplementation("junit:junit:4.13.2")
 
 }
